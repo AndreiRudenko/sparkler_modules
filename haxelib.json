@@ -1,0 +1,14 @@
+{
+	"name": "sparkler_modules",
+	"url": "https://github.com/RudenkoArts/sparkler_modules",
+	"license": "MIT",
+	"tags": ["modules", "modular", "particles", "system", "cross"],
+	"description": "modules for sparkler",
+	"version": "0.0.1",
+	"releasenote": "",
+	"contributors": ["RudenkoArts"],
+	"dependencies": {
+		"sparkler": "",
+		"luxe": ""
+	}
+}

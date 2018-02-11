@@ -6,11 +6,11 @@ import sparkler.core.ParticleData;
 import sparkler.core.Components;
 import sparkler.components.Velocity;
 import sparkler.components.StartPos;
-import sparkler.modules.VelocityUpdateModule;
-import sparkler.modules.StartPosModule;
+import sparkler.modules.helpers.VelocityUpdateModule;
+import sparkler.modules.helpers.StartPosModule;
 
 
-class TangentalAccelModule extends ParticleModule {
+class TangentialAccelModule extends ParticleModule {
 
 
 	public var accel:Float;
@@ -55,6 +55,25 @@ class TangentalAccelModule extends ParticleModule {
 
 	}
 
+	override function onremoved() {
+
+		emitter.remove_module(StartPosModule);
+		emitter.remove_module(VelocityUpdateModule);
+		vel_comps = null;
+		spos_comps = null;
+		
+	}
+
+	override function ondisabled() {
+
+		particles.for_each(
+			function(p) {
+				vel_comps.get(p).set_xy(0,0);
+			}
+		);
+		
+	}
+	
 	override function onspawn(p:Particle) {
 
 		var a:Float = accel;

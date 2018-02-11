@@ -1,4 +1,4 @@
-package sparkler.modules;
+package sparkler.modules.helpers;
 
 import sparkler.core.Particle;
 import sparkler.core.ParticleModule;
@@ -20,7 +20,7 @@ class StartPosModule extends ParticleModule {
 
 		super({});
 
-		priority = -998; // after spawners
+		priority = -990; // after spawners
 
 	}
 

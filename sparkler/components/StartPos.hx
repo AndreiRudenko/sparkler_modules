@@ -1,7 +1,7 @@
 package sparkler.components;
 
 
-import luxe.Vector;
+import sparkler.data.Vector;
 
 
 class StartPos extends Vector {

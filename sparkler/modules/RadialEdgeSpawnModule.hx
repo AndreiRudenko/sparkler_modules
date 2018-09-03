@@ -1,10 +1,10 @@
 package sparkler.modules;
 
+
 import sparkler.core.Particle;
 import sparkler.core.ParticleData;
 import sparkler.core.ParticleModule;
-
-import luxe.Vector;
+import sparkler.data.Vector;
 
 
 class RadialEdgeSpawnModule  extends ParticleModule {
@@ -25,13 +25,13 @@ class RadialEdgeSpawnModule  extends ParticleModule {
 
 		rnd_point = new Vector();
 
-		priority = -999;
+		_priority = -999;
 		
 	}
 
 	override function onspawn(p:Particle) {
 
-		var pd:ParticleData = emitter.add_to_bacher(p);
+		var pd:ParticleData = emitter.show_particle(p);
 
 		random_point_in_unit_circle();
 		rnd_point.normalize();
@@ -45,7 +45,7 @@ class RadialEdgeSpawnModule  extends ParticleModule {
 
 	override function onunspawn(p:Particle) {
 
-		emitter.remove_from_bacher(p);
+		emitter.hide_particle(p);
 
 	}
 

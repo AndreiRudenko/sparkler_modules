@@ -66,9 +66,13 @@ class RadialAccelModule extends ParticleModule {
 
 	override function ondisabled() {
 
+		var v:Velocity;
+
 		particles.for_each(
 			function(p) {
-				vel_comps.get(p).set_xy(0,0);
+				v = vel_comps.get(p);
+				v.x = 0;
+				v.y = 0;
 			}
 		);
 		

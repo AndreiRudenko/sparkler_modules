@@ -20,7 +20,7 @@ class StartPosModule extends ParticleModule {
 
 		super({});
 
-		priority = -990; // after spawners
+		_priority = -990; // after spawners
 
 	}
 

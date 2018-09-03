@@ -44,9 +44,15 @@ class DirectionFromAngleModule extends ParticleModule {
 
 	override function ondisabled() {
 
-		for (p in particles) {
-			vel_comps.get(p).set_xy(0,0);
-		}
+		var v:Velocity;
+
+		particles.for_each(
+			function(p) {
+				v = vel_comps.get(p);
+				v.x = 0;
+				v.y = 0;
+			}
+		);
 		
 	}
 	

@@ -38,8 +38,8 @@ class RadialEdgeSpawnModule  extends ParticleModule {
 
 		var r:Float = emitter.random_float(radius, radius_max);
 
-		pd.x = emitter.system.position.x + emitter.position.x + rnd_point.x * r;
-		pd.y = emitter.system.position.y + emitter.position.y + rnd_point.y * r;
+		pd.x = emitter.system.pos.x + emitter.pos.x + rnd_point.x * r;
+		pd.y = emitter.system.pos.y + emitter.pos.y + rnd_point.y * r;
 
 	}
 

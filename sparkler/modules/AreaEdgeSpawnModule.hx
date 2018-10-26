@@ -39,8 +39,8 @@ class AreaEdgeSpawnModule extends ParticleModule {
 		random_point_on_rect_edge(sx, sy);
 		rnd_point.x -= sx * 0.5;
 		rnd_point.y -= sy * 0.5;
-		pd.x = emitter.system.position.x + emitter.position.x + rnd_point.x;
-		pd.y = emitter.system.position.y + emitter.position.y + rnd_point.y;
+		pd.x = emitter.system.pos.x + emitter.pos.x + rnd_point.x;
+		pd.y = emitter.system.pos.y + emitter.pos.y + rnd_point.y;
 
 	}
 

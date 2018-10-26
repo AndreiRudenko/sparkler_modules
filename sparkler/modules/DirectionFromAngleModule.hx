@@ -71,8 +71,8 @@ class DirectionFromAngleModule extends ParticleModule {
 
 		var pd:ParticleData = particles_data[p.id];
 		angle = angle_between_points(
-				emitter.system.position.x + emitter.position.x, 
-				emitter.system.position.y + emitter.position.y, 
+				emitter.system.pos.x + emitter.pos.x, 
+				emitter.system.pos.y + emitter.pos.y, 
 				pd.x,
 				pd.y
 			);
